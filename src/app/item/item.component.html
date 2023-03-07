@@ -1,0 +1,15 @@
+
+<div  *ngIf="item.price <= condition || !condition"        class="card" style="width: 18rem;"  > 
+   
+    <img class="card-img-top" src="../../assets/download.jfif" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{item.title}}</h5>
+      <h5>{{item.price}}</h5>
+       
+      <button class="btn btn-primary"  (click)="BuyFromDaD()"  [disabled]="item.quantity==0">Buy</button>
+     <button class="btn btn-primary"  (click)="deleteFromDaD()" >Delete</button>
+       <!--<button class="btn btn-primary"  (click)="Like(P)" >Like</button>
+      <button class="btn btn-primary"  (click)="showDetails(P.id)" >Details</button>
+      <button [routerLink]="['/productDetails',P.id]">Show Details</button> -->
+    </div>
+</div>

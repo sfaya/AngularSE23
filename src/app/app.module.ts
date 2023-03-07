@@ -11,6 +11,7 @@ import { FormsModule } from '@angular/forms';
 import { ContactComponent } from './contact/contact.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { AddProductComponent } from './add-product/add-product.component';
+import { ItemComponent } from './item/item.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { AddProductComponent } from './add-product/add-product.component';
     HeaderComponent,
     ContactComponent,
     NotfoundComponent,
-    AddProductComponent
+    AddProductComponent,
+    ItemComponent
   ],
   imports: [
     BrowserModule,

@@ -27,9 +27,10 @@ getProducts(){
 
 
     Buy(P:Product){
-     // if( P.quantity>0){
+     
         P.quantity--;
-     // }
+        this.productS.updateProduct(P.id, P).subscribe(()=>this.getProducts());
+      
 
     }
     Like(P:Product){
@@ -41,13 +42,13 @@ this.R.navigate(['productDetails', id]);
     }
 
 
-    delete(P: Product){
-      this.productS.deleteProduct(P.id).subscribe(
+    delete(id: number){
+      this.productS.deleteProduct(id).subscribe(
         ()=> {
           alert('Deleted!');
           this.getProducts();
-          //this.R.navigate(['/product']);
-    })
+          
+    });
       
     }
 }
